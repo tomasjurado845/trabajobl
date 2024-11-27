@@ -1,0 +1,1 @@
+a:4:{s:11:"theme_color";s:7:"#ba2626";s:9:"font_size";s:4:"16px";s:14:"posts_per_page";s:1:"5";s:15:"welcome_message";s:23:"Bienvenido al Dashboard";}

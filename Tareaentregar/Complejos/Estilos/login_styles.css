@@ -1,0 +1,117 @@
+/* login_styles.css */
+
+/* Estilos para el fondo de la página */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo monoespaciada */
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    color: #00ff00; /* Color de texto verde neón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.5); /* Sombra verde neón */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+    position: relative;
+}
+
+.login-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgba(0, 255, 0, 0.3), rgba(0, 255, 0, 0.1));
+    z-index: -1; /* Colocarlo detrás del formulario */
+}
+
+/* Estilos del título */
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #00ff00; /* Color verde neón */
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #00ff00; /* Color verde neón */
+}
+
+/* Estilos para los campos de entrada */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #00ff00; /* Borde verde neón */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: #00ff00; /* Color de texto verde neón */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición para efectos de enfoque */
+}
+
+.form-group input:focus {
+    border-color: #00cc00; /* Color de borde en foco */
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5); /* Efecto de sombra verde en foco */
+}
+
+/* Estilos para el botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00ff00; /* Color de fondo verde neón */
+    color: black; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transición para efectos de hover */
+}
+
+button:hover {
+    background-color: #00cc00; /* Color más oscuro al pasar el mouse */
+    box-shadow: 0 4px 12px rgba(0, 255, 0, 0.5); /* Efecto de sombra al pasar el mouse */
+}
+
+/* Estilos para mensajes de error */
+.error {
+    color: #d9534f; /* Color rojo para mensajes de error */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Estilos para el enlace de registro */
+.register-link {
+    text-align: center; /* Centrar el texto */
+    margin-top: 10px; /* Espacio arriba del enlace */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #00ff00; /* Color verde neón */
+}
+
+.register-link a {
+    color: #00cc00; /* Color más claro para el enlace */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s; /* Transición de color */
+}
+
+.register-link a:hover {
+    color: #00ff99; /* Color más claro al pasar el mouse */
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}

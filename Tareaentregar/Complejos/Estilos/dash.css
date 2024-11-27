@@ -1,0 +1,281 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="light"] {
+    background-color: #f5f5f5; /* Fondo claro para el tema claro */
+    color: #333; /* Texto oscuro para el tema claro */
+}
+
+h2 {
+    font-size: 2em; /* Tamaño de fuente grande para encabezados */
+    color: #76ff03; /* Color verde brillante */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+a {
+    color: #76ff03; /* Color de enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Barra lateral */
+.sidebar {
+    position: fixed; /* Fija la barra lateral */
+    width: 250px; /* Ancho de la barra lateral */
+    height: 100%; /* Altura completa */
+    background-color: #1a1a1a; /* Fondo oscuro */
+    padding-top: 50px; /* Espaciado superior */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    transition: width 0.3s; /* Transición suave al cambiar el ancho */
+}
+
+.sidebar-header h2 {
+    color: #76ff03; /* Color del encabezado */
+    text-align: center; /* Centrar texto */
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 30px; /* Margen inferior */
+}
+
+.user-info {
+    text-align: center; /* Centrar información del usuario */
+    margin-bottom: 30px; /* Margen inferior */
+}
+
+.user-avatar {
+    width: 50px; /* Ancho del avatar */
+    height: 50px; /* Altura del avatar */
+    border-radius: 50%; /* Bordes redondeados */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.user-name {
+    display: block; /* Mostrar como bloque */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+.user-role {
+    display: block; /* Mostrar como bloque */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #999; /* Color gris */
+}
+
+.sidebar-menu {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+}
+
+.menu-item {
+    display: block; /* Mostrar como bloque */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    color: #e0e0e0; /* Color del texto */
+    border-bottom: 1px solid #333; /* Línea inferior */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+.menu-item:hover {
+    background-color: #333; /* Fondo al pasar el ratón */
+    cursor: pointer; /* Cambiar cursor */
+}
+
+.menu-item.active {
+    background-color: #76ff03; /* Fondo activo */
+    color: #121212; /* Texto oscuro */
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 250px; /* Margen izquierdo para la barra lateral */
+    padding: 20px; /* Espaciado interno */
+}
+
+.top-bar {
+    display: flex; /* Flexbox para la barra superior */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Alinear verticalmente */
+    background-color: #121212; /* Fondo oscuro */
+    padding: 10px 20px; /* Espaciado interno */
+    position: sticky; /* Fija en la parte superior */
+    top: 0; /* Parte superior */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+.search-container {
+    display: flex; /* Flexbox para la búsqueda */
+    align-items: center; /* Alinear verticalmente */
+}
+
+#searchInput {
+    padding: 8px; /* Espaciado interno */
+    margin-right: 10px; /* Margen derecho */
+    border: 1px solid #333; /* Borde oscuro */
+    background-color: #222; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+#searchInput:focus {
+    border-color: #76ff03; /* Borde verde al enfocar */
+}
+
+.search-filters select {
+    background-color: #222; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    border: 1px solid #333; /* Borde oscuro */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.search-filters select:focus {
+    border-color: #76ff03; /* Borde verde al enfocar */
+}
+
+.top-bar-actions {
+    display: flex; /* Flexbox para acciones de la barra superior */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.theme-toggle {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #76ff03; /* Color verde */
+    font-size: 20px; /* Tamaño de fuente */
+    margin-right: 20px; /* Margen derecho */
+    cursor: pointer; /* Cambiar cursor */
+}
+
+.user-dropdown {
+    position: relative; /* Posición relativa para el dropdown */
+}
+
+.user-dropdown .dropdown-content {
+    display: none; /* Ocultar contenido del dropdown */
+    position: absolute; /* Posición absoluta */
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    min-width: 160px; /* Ancho mínimo */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block; /* Mostrar contenido al pasar el ratón */
+}
+
+.user-dropdown .dropdown-content a {
+    padding: 10px; /* Espaciado interno */
+    display: block; /* Mostrar como bloque */
+    color: #76ff03; /* Color de enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.user-dropdown .dropdown-content a:hover {
+    background-color: #555; /* Fondo al pasar el ratón */
+}
+
+/* Contenido dinámico */
+.dynamic-content {
+    padding: 20px; /* Espaciado interno */
+    background-color: #222; /* Fondo oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    display: flex; /* Flexbox para cent rar contenido */
+    flex-direction: column; /* Alinear contenido en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    min-height: 300px; /* Altura mínima */
+}
+
+.uploaded-item {
+    background-color: #333; /* Fondo oscuro para elementos subidos */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen superior e inferior */
+    width: 100%; /* Ancho completo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.uploaded-image {
+    max-width: 100%; /* Ancho máximo para imágenes subidas */
+    height: auto; /* Altura automática */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el gráfico */
+.chart-container {
+    max-width: 600px; /* Ancho máximo del contenedor del gráfico */
+    width: 100%; /* Ancho completo */
+    height: 400px; /* Altura fija para el gráfico */
+    display: flex; /* Flexbox para centrar el gráfico */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+#myChart {
+    width: 100%; /* Ancho completo del gráfico */
+    height: 100%; /* Altura completa del gráfico */
+    max-height: 400px; /* Limitar la altura máxima del gráfico */
+}
+
+/* Estilos para formularios */
+form {
+    background-color: #333; /* Fondo oscuro para formularios */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    width: 100%; /* Ancho completo */
+    max-width: 500px; /* Ancho máximo */
+}
+
+form input, form textarea, form select {
+    width: 100%; /* Ancho completo para campos de formulario */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen superior e inferior */
+    border: 1px solid #555; /* Borde oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #222; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #76ff03; /* Borde verde al enfocar */
+}
+
+button {
+    background-color: #76ff03; /* Fondo verde para botones */
+    color: #121212; /* Texto oscuro */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+button:hover {
+    background-color: #66cc02; /* Fondo más oscuro al pasar el ratón */
+}
+
+/* Estilos para mensajes de alerta */
+.alert {
+    background-color: #ffcc00; /* Fondo amarillo para alertas */
+    color: #121212; /* Texto oscuro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px 0; /* Margen superior e inferior */
+    display: none; /* Ocultar por defecto */
+}
